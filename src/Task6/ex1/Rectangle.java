@@ -1,4 +1,4 @@
-package Task6;
+package Task6.ex1;
 
 public class Rectangle extends Shape {
     protected double width;
@@ -13,8 +13,7 @@ public class Rectangle extends Shape {
         this.length = 1.0;
     }
 
-    public Rectangle(double width, double length, String color, boolean filled
-    ) {
+    public Rectangle(double width, double length, String color, boolean filled) {
         super(color, filled);
         this.width = width;
         this.length = length;
@@ -51,5 +50,5 @@ public class Rectangle extends Shape {
                 "], width =" + width + ",length =" + length + "]]";
     }
 
+ }
 
-}

@@ -1,4 +1,4 @@
-package Task6;
+package Task6.ex1;
 
 public class Square extends Rectangle {
     protected double side;

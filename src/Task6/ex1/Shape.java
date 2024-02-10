@@ -1,4 +1,4 @@
-package Task6;
+package Task6.ex1;
 
 public abstract class Shape {
     protected String color = "red";
@@ -39,4 +39,5 @@ public abstract class Shape {
                 ", filled =" + filled +
                 '}';
     }
+
 }

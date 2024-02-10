@@ -1,4 +1,4 @@
-package Task6;
+package Task6.ex1;
 
 public class Circle extends Shape {
     protected double radius;
