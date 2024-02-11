@@ -1,11 +1,8 @@
 package Module2Tasks.Task1.Ex5;
-
 public class Candidate {
-
     private String name = "F. Mckinley";
     private String work = "businessman";
     private int income;
-
     public Candidate(String name, String work, int income) {
         this.name = name;
         this.work = work;

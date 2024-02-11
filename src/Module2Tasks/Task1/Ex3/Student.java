@@ -1,5 +1,4 @@
 package Module2Tasks.Task1.Ex3;
-
 import java.util.Scanner;
 
 public class Student {
@@ -12,8 +11,6 @@ public class Student {
         this.averageGrade = averageGrade;
         this.scholarship = scholarship;
     }
-
-
     public String getName() {
         return name;
     }

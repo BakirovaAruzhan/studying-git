@@ -5,7 +5,6 @@ public class Book {
     private String author;
     private double price;
     private String type;
-
     private int gty;
 
     public int getGty() {

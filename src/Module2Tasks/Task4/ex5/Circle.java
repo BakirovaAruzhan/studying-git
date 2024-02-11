@@ -2,10 +2,8 @@ package Module2Tasks.Task4.ex5;
 
 public class Circle extends Shape {
     private double radius = 0;
-
     public Circle() {
     }
-
     public Circle(double radius) {
         this.radius = radius;
     }

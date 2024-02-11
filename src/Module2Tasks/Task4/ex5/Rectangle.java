@@ -3,7 +3,6 @@ package Module2Tasks.Task4.ex5;
     public class Rectangle extends Shape {
         double width = 1.0;
         double length = 1.0;
-
         public Rectangle() {
         }
 

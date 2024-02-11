@@ -1,7 +1,5 @@
 package Module2Tasks.Task1.Ex5;
-
 import java.util.Scanner;
-
 public class PrivatePartyClub {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
