@@ -1,10 +1,12 @@
-package everset_academy.BookManagement.repository;
+package everset_academy.BookManagement.BookM.repository;
 
-import everset_academy.BookManagement.model.Book;
+import everset_academy.BookManagement.BookM.model.Book;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class JDBCRepository implements BookRepository {
     private final JdbcTemplate jdbcTemplate;
 
@@ -15,9 +17,9 @@ public class JDBCRepository implements BookRepository {
     @Override
     public int save(Book book) {
         return jdbcTemplate.update("""
-                insert into book(author, genre, Release_year,title, Description) 
-                values (?,?,?,?,?)
-                """, book.getAuthor(), book.getGenre(), book.getRelease_year(), book.getTitle(), book.getDescription());
+                insert into book(id, author, genre, release_year,title, description) 
+                values (?,?,?,?,?,?)
+                """, book.getId(), book.getAuthor(), book.getGenre(), book.getRelease_year(), book.getTitle(), book.getDescription());
     }
 
 
@@ -27,10 +29,10 @@ public class JDBCRepository implements BookRepository {
                 update book
                 set author = ?,
                 genre = ?,
-                Release_year = ?,
+                release_year = ?,
                 title = ?,
-                Description = ?
-                return id =?
+                description = ?
+                where id =?
                 """, book.getAuthor(), book.getGenre(), book.getRelease_year(), book.getTitle(), book.getDescription(), book.getId()
         );
 
@@ -38,21 +40,24 @@ public class JDBCRepository implements BookRepository {
 
     @Override
     public int deleteById(Long id) {
-        List<Book> books = jdbcTemplate.query("""
-                        select * from book= where m.id = ?
-                        """,
-                new BookRowMapper(),
-                id);
-        if (books.isEmpty()) {
-            return null;
-        }
-        return books.get(0);
+        return jdbcTemplate.update("delete from book where  id = ?", id);
     }
-
 
 
     @Override
     public List<Book> findAll() {
         return jdbcTemplate.query("select * from book", new BookRowMapper());
     }
+
+    @Override
+    public Book findID(Long id) {
+        List<Book> bookList = jdbcTemplate.query("select * from book where id=? ", new BookRowMapper(), id);
+        if (bookList.isEmpty()){
+            return null;
+        }
+
+        return bookList.get(0);
+    }
+
+
 }

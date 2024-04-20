@@ -8,11 +8,11 @@
 		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>everset_academy</groupId>
-	<artifactId>BookManagement</artifactId>
+	<groupId>kz.everset</groupId>
+	<artifactId>jdbc-showcase</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BookManagement</name>
-	<description>Demo project for Spring Boot</description>
+	<name>jdbc-showcase</name>
+	<description>Demo project for Spring Boot and JDBC</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -27,6 +27,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.32</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
@@ -35,6 +41,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>6.1.6</version>
 		</dependency>
 	</dependencies>
 
