@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -5,6 +6,14 @@ target/
 !**/src/test/**/target/
 
 ### STS ###
+=======
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+>>>>>>> 6f48a1934b8b17a1909c4a5e6d38374544ae1a8e
 .apt_generated
 .classpath
 .factorypath
@@ -18,6 +27,9 @@ target/
 *.iws
 *.iml
 *.ipr
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,3 +43,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### VS Code ###
+
+### Mac OS ###
+.DS_Store
